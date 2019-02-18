@@ -17,14 +17,14 @@ const Todo = namespace('todo')
 
 @Component({
   components: {
-    Card
-  }
+    Card,
+  },
 })
 export default class IndexPage extends Vue {
   @Todo.Getter counter!: TodoGettersInterface['counter']
   @Todo.Mutation add!: TodoMutationInterface['add']
 
-  increment (num: number) {
+  increment(num: number) {
     this.add(num)
   }
 }
