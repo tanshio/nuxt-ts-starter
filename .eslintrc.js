@@ -1,61 +1,14 @@
 module.exports = {
-  root: true,
-  env: {
-    browser: true,
-    node: true
-  },
-  parser: '@typescript-eslint/parser',
+  plugins: ['@typescript-eslint'],
   parserOptions: {
-    project: './tsconfig.json',
-    sourceType: 'module',
+    parser: '@typescript-eslint/parser'
   },
   extends: [
-    "eslint:recommended",
-    "typescript",
-    'plugin:vue/recommended',
-    'plugin:prettier/recommended'
-  ],
-  // required to lint *.vue files
-  plugins: [
-    '@typescript-eslint',
-    'vue',
-    'prettier'
-  ],
-  // add your custom rules here
-  rules: {
-    // ES2019 available in TypeScript
-    'node/no-unsupported-features/es-syntax': 0,
-
-    // allow overload
-    'no-dupe-class-members': 0,
-
-    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unused-vars.md
-    'no-unused-vars': 0,
-    '@typescript-eslint/no-unused-vars': [2, {args: 'none'}],
-
-    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-array-constructor.md
-    'no-array-constructor': 0,
-    '@typescript-eslint/no-array-constructor': 2,
-
-    '@typescript-eslint/adjacent-overload-signatures': 2,
-    '@typescript-eslint/no-namespace': [2, {allowDeclarations: true}],
-    '@typescript-eslint/prefer-namespace-keyword': 2,
-    // allow require for power-assert
-    // '@typescript-eslint/no-require-imports': 2,
-    '@typescript-eslint/no-var-requires': 2,
-    '@typescript-eslint/no-object-literal-type-assertion': 2,
-    '@typescript-eslint/no-unnecessary-type-assertion': 2,
-    // opinionated
-    // '@typescript-eslint/promise-function-async': 2,
-    '@typescript-eslint/restrict-plus-operands': 2,
-    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-    'vue/max-attributes-per-line': 0,
-    'vue/attributes-order': 0
-  },
-  settings: {
-    node: {
-      tryExtensions: ['.ts', '.tsx', '.js', '.jsx', '.json', '.node'],
-    },
-  },
+    'plugin:@typescript-eslint/recommended',
+    '@nuxtjs',
+    'plugin:prettier/recommended',
+    'prettier/standard',
+    'prettier/@typescript-eslint',
+    'prettier/vue'
+  ]
 }
