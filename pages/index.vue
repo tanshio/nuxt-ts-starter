@@ -1,11 +1,15 @@
-<template lang="pug">
-  section
-    div
-      div Nuxt TypeScript Starter{{counter}}
-      div
-        button(@click="increment(2)") Counts
-        app-button(text="text")
-        card
+<template>
+  <section>
+    <div>
+      <div>
+        Nuxt TypeScript Starter{{counter}}
+      </div>
+      <div>
+        <app-button text="aaa"></app-button>
+        <card></card>
+      </div>
+    </div>
+  </section>
 </template>
 
 <script lang="ts">

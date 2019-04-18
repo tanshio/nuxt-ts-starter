@@ -8,23 +8,24 @@
     "generate": "nuxt generate",
     "lint": "tslint --project .",
     "post-update": "yarn upgrade --latest",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "start-storybook -p 60500",
     "build-storybook": "build-storybook"
   },
   "dependencies": {
     "axios": "^0.18.0",
-    "nuxt": "^2.6.1",
-    "vue-property-decorator": "^7.3.0",
-    "vuex-class": "^0.3.1"
+    "nuxt": "^2.6.2",
+    "vue-property-decorator": "^8.1.0",
+    "vuex-class": "^0.3.2"
   },
   "devDependencies": {
     "@babel/core": "^7.3.3",
-    "@nuxt/typescript": "^2.6.1",
+    "@nuxt/typescript": "^2.6.2",
     "@nuxtjs/eslint-config": "^0.0.1",
-    "@storybook/addon-actions": "^4.1.11",
-    "@storybook/addon-links": "^4.1.11",
-    "@storybook/addons": "^4.1.11",
-    "@storybook/vue": "^4.1.11",
+    "@storybook/addon-actions": "^5.0.10",
+    "@storybook/addon-links": "^5.0.10",
+    "@storybook/addon-storysource": "^5.0.10",
+    "@storybook/addons": "^5.0.10",
+    "@storybook/vue": "^5.0.10",
     "@types/webpack": "^4.4.24",
     "@typescript-eslint/eslint-plugin": "^1.6.0",
     "babel-loader": "^8.0.5",
@@ -42,12 +43,14 @@
     "eslint-plugin-standard": "^4.0.0",
     "eslint-plugin-vue": "^5.2.2",
     "node-sass": "^4.11.0",
-    "prettier": "^1.16.4",
+    "prettier": "^1.17.0",
     "pug": "2.0.3",
     "pug-plain-loader": "^1.0.0",
     "sass-loader": "^7.1.0",
     "ts-node": "^8.0.3",
-    "tslint-config-standard": "^8.0.1"
+    "tslint-config-standard": "^8.0.1",
+    "vuex-module-decorators": "^0.9.8",
+    "webpack-merge": "^4.2.1"
   },
   "browserslist": [
     "last 2 Android version",

@@ -18,6 +18,7 @@ export default {
   template: `
     <button :style="buttonStyles" @click="onClick">
       <slot></slot>
+      <span>aaa</span>
     </button>
   `,
 

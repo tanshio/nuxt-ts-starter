@@ -23,13 +23,13 @@ module.exports = (storybookBaseConfig, configType, config) => {
     loader: 'pug-plain-loader'
   })
 
-  config.resolve = {
-    extensions: ['.js', '.vue', '.json'],
-      alias: {
-      'assets': path.resolve('path/to/assets'),
-        '~': path.resolve(__dirname, '../')
-    }
-  }
+  // config.resolve = {
+  //   extensions: ['.js', '.vue', '.json'],
+  //     alias: {
+  //     'assets': path.resolve('path/to/assets'),
+  //       '~': path.resolve(__dirname, '../')
+  //   }
+  // }
 
   config.plugins.push(new ForkTsCheckerWebpackPlugin())
 
