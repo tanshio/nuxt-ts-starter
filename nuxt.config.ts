@@ -10,6 +10,15 @@ const config = {
   },
   loading: { color: '#3B8070' },
   css: ['~/assets/css/main.css'],
+  modules: [
+    [
+      'nuxt-i18n',
+      {
+        parsePages: false,
+        // Options
+      },
+    ],
+  ],
   build: {
     postcss: {
       plugins: {
