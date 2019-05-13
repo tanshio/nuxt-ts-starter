@@ -10,6 +10,18 @@ const config = {
   },
   loading: { color: '#3B8070' },
   css: ['~/assets/css/main.css'],
+  modules: [
+    [
+      'nuxt-i18n',
+      {
+        parsePages: false,
+        locales: [{ code: 'ja', iso: 'ja-JP' }, { code: 'en', iso: 'en-US' }],
+        defaultLocale: 'ja',
+        vueI18nLoader: true,
+        // Options
+      },
+    ],
+  ],
   build: {
     postcss: {
       plugins: {

@@ -1,6 +1,12 @@
 <template lang="pug">
   header
     h1 Header
+    ul
+      li
+        <nuxt-link :to="switchLocalePath('ja')">ja</nuxt-link>
+      li
+        <nuxt-link :to="switchLocalePath('en')">en</nuxt-link>
+
 </template>
 
 <script lang="ts">

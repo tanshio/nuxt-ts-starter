@@ -1,12 +1,14 @@
+<i18n src="./index.json" />
+<i18n src="./common.json" />
 <template>
   <section>
     <div>
       <div>
-        Nuxt TypeScript Starter{{counter}}
+        <p>{{ $t('hello') }}</p>
+        <p>{{ $t('common') }}</p>
       </div>
       <div>
-        <app-button text="aaa"></app-button>
-        <card></card>
+        <n-link :to="localePath('test')">test</n-link>
       </div>
     </div>
   </section>

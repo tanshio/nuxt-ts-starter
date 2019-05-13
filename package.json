@@ -43,6 +43,7 @@
     "eslint-plugin-standard": "^4.0.0",
     "eslint-plugin-vue": "^5.2.2",
     "node-sass": "^4.11.0",
+    "nuxt-i18n": "^5.12.2",
     "prettier": "^1.17.0",
     "pug": "2.0.3",
     "pug-plain-loader": "^1.0.0",
