@@ -1,4 +1,3 @@
-import * as postCssCustomMedia from 'postcss-custom-media'
 const config = {
   head: {
     title: 'starter',
@@ -25,28 +24,22 @@ const config = {
   ],
   build: {
     postcss: {
-      plugins: [
-        require('postcss-flexbugs-fixes')(),
-        require('postcss-object-fit-images')(),
-        require('postcss-calc')(),
-        postCssCustomMedia({
-          extensions: {
-            '--v-sm': '(min-width: 640px)',
-            '--v-sm2': '(min-width: 768px)',
-            '--v-md': '(min-width: 1024px)',
-            '--v-lg': '(min-width: 1200px)',
-            '--v-xl': '(min-width: 1440px)',
-          },
-        }),
-      ],
+      plugins: {
+        'postcss-flexbugs-fixes': {},
+        'postcss-calc': {},
+        'postcss-object-fit-images': {},
+        'postcss-custom-media': {
+          importFrom: ['./assets/mq.json'],
+        },
+      },
       preset: {
         stage: 0,
         features: {
           'nesting-rules': true,
         },
         autoprefixer: { grid: true },
-        // importFrom: ['assets/css/_var.css','./assets/css/grid/_grid.css'],
-        preserve: true,
+        // importFrom: ['assets/css/main.css'],
+        // preserve: true,
       },
     },
   },

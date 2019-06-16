@@ -1,0 +1,25 @@
+.l-col--1-2 {
+  flex-basis: calc(1 / 2 * 100%);
+  max-width: calc(1 / 2 * 100%);
+}
+
+@media (--v-sm) {
+  .l-col--sm-1-2 {
+    flex-basis: calc(1 / 2 * 100%);
+    max-width: calc(1 / 2 * 100%);
+  }
+}
+
+@media (--v-md) {
+  .l-col--md-1-2 {
+    flex-basis: calc(1 / 2 * 100%);
+    max-width: calc(1 / 2 * 100%);
+  }
+}
+
+@media (--v-lg) {
+  .l-col--lg-1-2 {
+    flex-basis: calc(1 / 2 * 100%);
+    max-width: calc(1 / 2 * 100%);
+  }
+}

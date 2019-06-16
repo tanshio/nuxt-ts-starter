@@ -13,8 +13,8 @@ import Footer from '../components/layouts/Footer.vue'
 @Component({
   components: {
     'app-header': Header,
-    'app-footer': Footer
-  }
+    'app-footer': Footer,
+  },
 })
 export default class DefaultLayout extends Vue {}
 </script>

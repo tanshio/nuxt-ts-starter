@@ -10,9 +10,28 @@
       <div>
         <n-link :to="localePath('test')">test</n-link>
       </div>
+      <div class="l-container">
+        <div class="l-row">
+          <div class="l-col--12-12 l-col--md-6-12">aaa</div>
+          <div class="l-col--12-12 l-col--md-6-12">aaa</div>
+        </div>
+      </div>
     </div>
   </section>
 </template>
+
+<style lang="postcss">
+.l-row {
+  object-fit: contain;
+  font-family: var(--g-font-san);
+  @media (--v-md) {
+    background: red;
+  }
+  & div {
+    background: #fff;
+  }
+}
+</style>
 
 <script lang="ts">
 import { namespace } from 'vuex-class'

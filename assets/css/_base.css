@@ -1,0 +1,58 @@
+:root {
+  --vh-offset: 0px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: var(--g-fontFamily);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  overflow-x: hidden;
+  padding-bottom: 50px;
+  padding-top: 70px;
+  color: var(--g-color-primary);
+}
+
+[tabindex="-1"]:focus {
+  outline: 0;
+}
+
+@-ms-viewport {
+  width: auto;
+}
+
+/*::selection {
+  color: #fff;
+  background-color: var(--g-color-primary);
+}*/
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+a {
+  text-decoration: none;
+}
+
+.svg-sprite {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}

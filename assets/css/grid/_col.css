@@ -1,0 +1,18 @@
+/*
+@import "./col/_col12.css";
+@import "./col/_col11.css";
+@import "./col/_col10.css";
+@import "./col/_col9.css";
+@import "./col/_col8.css";
+@import "./col/_col7.css";
+@import "./col/_col6.css";
+@import "./col/_col5.css";
+@import "./col/_col4.css";
+@import "./col/_col3.css";
+@import "./col/_col2.css";
+*/
+
+@import "./col/_col.css";
+@import "./col/_colSm.css";
+@import "./col/_colMd.css";
+@import "./col/_colLg.css";

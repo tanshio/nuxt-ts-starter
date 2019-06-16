@@ -1,0 +1,33 @@
+@import "./_row.css";
+@import "./_col.css";
+@import "./_offset.css";
+
+.l-container {
+  padding-right: calc(var(--g-gutter-md) * 0.5);
+  padding-left: calc(var(--g-gutter-md) * 0.5);
+}
+
+[class^="l-col"] {
+  padding-right: calc(var(--g-gutter-md) * 0.5);
+  padding-left: calc(var(--g-gutter-md) * 0.5);
+
+  &.is-noGutter {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  @media (--v-sm) {
+    padding-right: calc(var(--g-gutter-md) * 0.5);
+    padding-left: calc(var(--g-gutter-md) * 0.5);
+  }
+
+  @media (--v-md) {
+    padding-right: calc(var(--g-gutter-md) * 0.5);
+    padding-left: calc(var(--g-gutter-md) * 0.5);
+  }
+
+  @media (--v-lg) {
+    padding-right: calc(var(--g-gutter-lg) * 0.5);
+    padding-left: calc(var(--g-gutter-lg) * 0.5);
+  }
+}
