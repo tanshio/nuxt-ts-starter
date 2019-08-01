@@ -1,9 +1,0 @@
-{
-  "custom-media": {
-    "--v-sm": "(min-width: 768px)",
-    "--v-md-down": "(max-width: 990px)",
-    "--v-md": "(min-width: 991px)",
-    "--v-lg": "(min-width: 1200px)",
-    "--v-xl": "(min-width: 1440px)"
-  }
-}
