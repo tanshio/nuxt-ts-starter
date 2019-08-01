@@ -1,4 +1,13 @@
+const srcDir = 'src/'
+
 const config = {
+  srcDir,
+  mode: 'universal',
+  server: {
+    port: 3000,
+    host: '0.0.0.0',
+    timing: false,
+  },
   head: {
     title: 'starter',
     meta: [
@@ -11,16 +20,16 @@ const config = {
   loading: { color: '#3B8070' },
   css: ['~/assets/css/main.css'],
   modules: [
-    [
-      'nuxt-i18n',
-      {
-        parsePages: false,
-        locales: [{ code: 'ja', iso: 'ja-JP' }, { code: 'en', iso: 'en-US' }],
-        defaultLocale: 'ja',
-        vueI18nLoader: true,
-        // Options
-      },
-    ],
+    // [
+    //   'nuxt-i18n',
+    //   {
+    //     parsePages: false,
+    //     locales: [{ code: 'ja', iso: 'ja-JP' }, { code: 'en', iso: 'en-US' }],
+    //     defaultLocale: 'ja',
+    //     vueI18nLoader: true,
+    //     // Options
+    //   },
+    // ],
   ],
   build: {
     postcss: {
@@ -29,7 +38,7 @@ const config = {
         'postcss-calc': {},
         'postcss-object-fit-images': {},
         'postcss-custom-media': {
-          importFrom: ['./assets/mq.json'],
+          importFrom: [`./${srcDir}assets/mq.json`],
         },
       },
       preset: {
@@ -40,6 +49,13 @@ const config = {
         autoprefixer: { grid: true },
         // importFrom: ['assets/css/main.css'],
         // preserve: true,
+      },
+      terser: {
+        terserOptions: {
+          compress: {
+            drop_console: process.env.NODE_ENV === 'production',
+          },
+        },
       },
     },
   },
