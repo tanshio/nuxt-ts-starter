@@ -1,6 +1,7 @@
-<template lang="pug">
-  div
-    p {{text}}
+<template>
+  <div>
+    <p>{{text}}</p>
+  </div>
 </template>
 
 <script lang="ts">

@@ -1,16 +1,26 @@
 <template>
   <section>
     <div>
-      <div>
-        test
-      </div>
-      <div>
-
-      </div>
       <div class="l-container">
         <div class="l-row">
           <div class="l-col--12-12 l-col--md-6-12">aaa</div>
-          <div class="l-col--12-12 l-col--md-6-12">aaa</div>
+          <div class="l-col--12-12 l-col--md-6-12">
+            <div :class="{ control: true }">
+              <div>
+                <input
+                  v-validate="'required|email'"
+                  :class="{ input: true, 'is-danger': errors.has('email') }"
+                  name="email"
+                  type="text"
+                  placeholder="Email"
+                />
+              </div>
+
+              <span v-show="errors.has('email')" class="help is-danger">{{
+                errors.first('email')
+              }}</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>

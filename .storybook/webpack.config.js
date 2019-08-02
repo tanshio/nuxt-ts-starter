@@ -59,6 +59,12 @@ module.exports = async ({ config, mode }) => {
     enforce: 'pre',
   });
 
+  config.module.rules.push({
+    test: /\.vue$/,
+    loader: 'storybook-addon-vue-info/loader',
+    enforce: 'post'
+  })
+
   config.module.rules.push({ test: /\.scss$/, loaders: [ 'style-loader', 'css-loader', 'sass-loader' ] });
 
   config.resolve.extensions.push('.ts', '.tsx', '.js', '.jsx', '.vue', '.css', '.scss', '.html');

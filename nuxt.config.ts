@@ -19,6 +19,7 @@ const config = {
   },
   loading: { color: '#3B8070' },
   css: ['~/assets/css/main.css'],
+  plugins: ['~/plugins/plugins'],
   modules: [
     // [
     //   'nuxt-i18n',

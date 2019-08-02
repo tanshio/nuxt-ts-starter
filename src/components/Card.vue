@@ -1,6 +1,7 @@
-<template lang="pug">
-  div
-    p Card
+<template>
+  <div>
+    <p>Card</p>
+  </div>
 </template>
 
 <script lang="ts">

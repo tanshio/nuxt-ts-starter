@@ -8,7 +8,7 @@ describe('Counter.vue', () => {
         text: 'aaa'
       }
     })
-    expect(wrapper.props().text).toBe('aaa');
+    expect(wrapper.props().text).toBe('aaaaaaa');
     expect(wrapper.text()).toMatch(`aaa`);
   })
 })

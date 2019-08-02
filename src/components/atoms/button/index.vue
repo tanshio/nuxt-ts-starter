@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div @click="handleClick">
     <p>{{ text }}</p>
   </div>
 </template>
@@ -26,6 +26,11 @@ export default {
     isLoading: {
       type: Boolean,
       default: false,
+    },
+  },
+  methods: {
+    handleClick(event) {
+      this.$emit('click', event)
     },
   },
 }

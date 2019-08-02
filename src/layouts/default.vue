@@ -1,8 +1,9 @@
-<template lang="pug">
-  .container
-    app-header
-    Nuxt
-    app-footer
+<template>
+  <div class="container">
+    <app-header />
+    <Nuxt />
+    <app-footer />
+  </div>
 </template>
 
 <script lang="ts">
