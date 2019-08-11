@@ -1,9 +1,9 @@
-export interface TodoMutationInterface {
-  add: (num: number) => {}
-}
+import { stateTodo, TodoType } from './state'
 
-export default {
-  add(state, num = 1) {
-    state.counter = state.counter + num
+export const todoMutations = {
+  appendTodo(todo: TodoType) {
+    stateTodo.todoList.push(todo)
   },
 }
+
+export default todoMutations

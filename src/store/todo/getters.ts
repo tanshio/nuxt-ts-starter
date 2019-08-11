@@ -1,9 +1,9 @@
-import { TodoStateInterface } from './state'
+import { stateTodo } from './state'
 
-export interface TodoGettersInterface extends TodoStateInterface {}
-
-export default {
-  counter(state): TodoGettersInterface['counter'] {
-    return state.counter
+const todoGetters = {
+  todoLList() {
+    return stateTodo.todoList
   },
 }
+
+export default todoGetters

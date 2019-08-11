@@ -1,11 +1,24 @@
-export interface TodoStateInterface {
-  counter: number
-  test: string
+import Vue from 'vue'
+
+export type TodoType = {
+  id: number
+  title: string
+  content: string
 }
 
-export default (): TodoStateInterface => {
-  return {
-    counter: 0,
-    test: 'aaa',
-  }
+export type TodoListType = {
+  todoList: TodoType[]
 }
+
+export const stateTodo = Vue.observable<TodoListType>({
+  todoList: [
+    {
+      id: 1,
+      title: 'test',
+      content: 'content',
+    },
+  ],
+})
+
+export const state = (): void => {}
+export default state
