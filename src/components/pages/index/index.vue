@@ -51,9 +51,12 @@
 
 <script lang="ts">
 import Vue, { PropType } from 'vue'
-import Card from '../Card.vue'
-import AppButton from '../atoms/button/index.vue'
-import { TodoType } from '../../store/todo/state'
+import AppButton from '../../atoms/Button/index.vue'
+import { TodoType } from '../../../store/todo/state'
+import Card from '~/src/components/Card.vue'
+import Test from '~/src/components/Test.vue'
+
+
 
 export default Vue.extend({
   components: {
@@ -64,6 +67,11 @@ export default Vue.extend({
     todoList: {
       type: Array as PropType<TodoType[]>,
       default: () => [],
+    },
+  },
+  methods: {
+    test() {
+      this.$
     },
   },
 })

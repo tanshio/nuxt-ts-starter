@@ -5,10 +5,10 @@ describe('Counter.vue', () => {
   it('click button and countup', () => {
     const wrapper = shallowMount(Button, {
       propsData: {
-        text: 'aaa'
-      }
+        text: 'aaa',
+      },
     })
-    expect(wrapper.props().text).toBe('aaaaaaa');
-    expect(wrapper.text()).toMatch(`aaa`);
+    expect(wrapper.props().text).toBe('aaaaaaa')
+    expect(wrapper.text()).toMatch(`aaa`)
   })
 })

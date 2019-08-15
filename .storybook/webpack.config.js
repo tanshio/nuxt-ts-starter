@@ -1,13 +1,13 @@
-const path = require('path');
+const path = require('path')
 
 module.exports = async ({ config, mode }) => {
   config.module.rules.push({
     test: /.*\.(ts|tsx)$/,
     loader: 'ts-loader',
     options: {
-      appendTsSuffixTo: [/\.vue$/]
-    }
-  });
+      appendTsSuffixTo: [/\.vue$/],
+    },
+  })
 
   config.module.rules.push({
     test: /\.stories\.(ts|tsx|js|jsx)$/,
@@ -18,17 +18,36 @@ module.exports = async ({ config, mode }) => {
       },
     ],
     enforce: 'pre',
-  });
+  })
 
   config.module.rules.push({
     test: /\.vue$/,
     loader: 'storybook-addon-vue-info/loader',
-    enforce: 'post'
+    enforce: 'post',
   })
 
-  config.module.rules.push({ test: /\.scss$/, loaders: [ 'style-loader', 'css-loader', 'sass-loader' ] });
+  config.module.rules.push({
+    test: /\.scss$/,
+    loaders: ['style-loader', 'css-loader', 'sass-loader'],
+  })
 
-  config.resolve.extensions.push('.ts', '.tsx', '.js', '.jsx', '.vue', '.css', '.scss', '.html');
+  config.resolve.extensions.push(
+    '.ts',
+    '.tsx',
+    '.js',
+    '.jsx',
+    '.vue',
+    '.css',
+    '.scss',
+    '.html',
+  )
 
-  return config;
-};
+  config.resolve.alias['assets'] = path.resolve('./src/assets')
+  config.resolve.alias['~'] = path.resolve(__dirname, '../src')
+  config.resolve.alias['@'] = path.resolve(__dirname, '../src')
+
+  console.log(path.resolve(__dirname, '../src/'), 'aaaaaa')
+  console.log(config.resolve.alias)
+
+  return config
+}
